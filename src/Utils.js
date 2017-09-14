@@ -1,7 +1,7 @@
 function parse(value) {
   if (typeof value === 'number') return value;
   else if (value.toString().includes('/')) return encodeURIComponent(value);
-  else if (isNaN(parseInt(value, 10)) return value;
+  else if (isNaN(parseInt(value, 10))) return value;
   return parseInt(value, 10);
 }
 
