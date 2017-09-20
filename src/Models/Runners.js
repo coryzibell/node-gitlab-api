@@ -5,6 +5,10 @@ class Runners extends BaseModel {
   all(options = {}) {
     return this.get('runners/all', options);
   }
+  
+  owned(options = {}) {
+    return this.get('runners', options);
+  }
 
   show(runnerId) {
     const rId = Utils.parse(runnerId);
