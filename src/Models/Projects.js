@@ -14,6 +14,7 @@ const ProjectServices = require('./ProjectServices');
 const ProjectTriggers = require('./ProjectTriggers');
 const ProjectRunners = require('./ProjectRunners');
 const ProjectPipelines = require('./ProjectPipelines');
+const ProjectVariables = require('./ProjectVariables');
 
 class Projects extends BaseModel {
   constructor(...args) {
@@ -31,6 +32,7 @@ class Projects extends BaseModel {
     this.triggers = new ProjectTriggers(...args);
     this.pipelines = new ProjectPipelines(...args);
     this.runners = new ProjectRunners(...args);
+    this.variables = new ProjectVariables(...args);
   }
 
   all(options = {}) {
