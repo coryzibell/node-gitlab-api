@@ -23,6 +23,12 @@ class Runners extends BaseModel {
 
     return this.delete(`runners/${rId}`);
   }
+  
+  disable(runnerId, projectId) {
+    const [rId, pId] = [runnerId, projectId].map(Utils.parse);
+    
+    return this.delete(`projects/${projectId}/runners/${runnerId}`);
+  }
 }
 
 module.exports = Runners;
